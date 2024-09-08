@@ -84,7 +84,7 @@ h1 {
   gap: 15px;
 }
 
-.about .items > * {
+.about .items [class*="col-item-"] {
   width: 110%;
   display: flex;
   flex-direction: column;
@@ -120,6 +120,7 @@ h1 {
   border-radius: 100%;
   cursor: pointer;
   border: 1.5px solid var(--dark);
+  overflow: hidden;
 }
 
 .about .items button:hover {
@@ -127,6 +128,27 @@ h1 {
     width: 70px;
     border-radius: 48px;
     border: none;
+    transition-duration: 0.3s;
+    transform: translateY(-6px);
+    box-shadow: 0 6px rgba(185, 177, 35, 0.5);
+}
+
+.about .items button:hover .svgIcon {
+    animation: travel1 0.3s ease-in-out, travel2 0.3s ease-in-out 0.3s;
+}
+
+@keyframes travel1 {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(40px); }
+}
+@keyframes travel2 {
+  0% { transform: translateX(-40px); }
+  100% { transform: translateX(0); }
+}
+
+.about .items button:active {
+    transform: translateY(2px);
+    box-shadow: none;
 }
 
 .about .items > *:not(:last-child) {
@@ -156,29 +178,57 @@ h1 {
     max-width: 50%;
   }
 
-  .about .header {
-    gap: 20px;
+  .about {
+    padding-bottom: 0px;
   }
 
-  .items {
+  .about {
+    gap: 0px;
+  }
+
+  .about .header {
+    gap: 20px;
+    align-items: start;
+    margin-bottom: -20px;
+  }
+
+  .about .items {
     margin-top: 20px;
+    width: 100%;
     display: grid;
     grid-template-columns: auto auto auto;
   }
 
-  .item {
+  [class*="col-item-"] {
     padding-top: 40px;
   }
 
-  .items:nth-child(.item) {
-    border: 1px solid;
-    border-color: linear-gradient(270deg, #febf58 0%, #ff7e3f 100%);
+  [class*="col-item-"] .sub-header {
+    width: 60%;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+  }
+
+  .about .items > * {
+    width: 100%;
+  }
+
+  .about .items > *:not(:last-child) {
+    padding-bottom: 0;
+    border-bottom: none;
+    border-right: 1px solid;
+    border-image: linear-gradient(270deg, #febf58 0%, #ff7e3f 100%);
+    border-image-slice: 1;
+  }
+
+  .image {
+    width: 80%;
   }
 }
 
 @media only screen and (min-width: 600px) {
-  .home,
-  .about {
-    padding: 100px;
-  }
+  
 }
