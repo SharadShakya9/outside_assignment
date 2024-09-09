@@ -4,11 +4,13 @@
   --light: #9ff1d5;
   --grey: #3d3d3d;
   --mid: #065545;
-  --yellow: #FEBF58;
+  --yellow: #febf58;
+  --lighter: #E8FCF5;
 }
 
 .home,
-.about {
+.about,
+.blog {
   width: 100%;
   padding: 80px;
 }
@@ -124,31 +126,39 @@ h1 {
 }
 
 .about .items button:hover {
-    background-color: var(--yellow);
-    width: 70px;
-    border-radius: 48px;
-    border: none;
-    transition-duration: 0.3s;
-    transform: translateY(-6px);
-    box-shadow: 0 6px rgba(185, 177, 35, 0.5);
+  background-color: var(--yellow);
+  width: 70px;
+  border-radius: 48px;
+  border: none;
+  transition-duration: 0.3s;
+  transform: translateY(-6px);
+  box-shadow: 0 6px rgba(185, 177, 35, 0.5);
 }
 
 .about .items button:hover .svgIcon {
-    animation: travel1 0.3s ease-in-out, travel2 0.3s ease-in-out 0.3s;
+  animation: travel1 0.3s ease-in-out, travel2 0.3s ease-in-out 0.3s;
 }
 
 @keyframes travel1 {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(40px); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(40px);
+  }
 }
 @keyframes travel2 {
-  0% { transform: translateX(-40px); }
-  100% { transform: translateX(0); }
+  0% {
+    transform: translateX(-40px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .about .items button:active {
-    transform: translateY(2px);
-    box-shadow: none;
+  transform: translateY(2px);
+  box-shadow: none;
 }
 
 .about .items > *:not(:last-child) {
@@ -160,17 +170,64 @@ h1 {
 
 .items .image {
   margin-top: 60px;
+  --f: 1.15; /* the scale factor */
+  
+  clip-path: inset(0);
+  transition: .4s;
+}
+
+.items .image:hover {
+  clip-path: inset(calc((1 - 1/var(--f)) * 50%));
+  scale: var(--f)
+}
+
+.blog {
+  background-color: var(--dark);
+}
+
+.blog h1 {
+  font-size: 48px;
+  letter-spacing: -0.02rem;
+  line-height: 58px;
+  color: var(--light);
+}
+
+.blog h2, p {
+  color: var(--lighter);
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.blog h2 {
+  font-family: 'Sora';
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 0.02rem;
+}
+
+.blog p {
+  font-weight: 400;
+  letter-spacing: 0.01rem;
+  text-align: left;
+}
+
+@media only screen and (min-width: 600px) {
+  .about, .blog {
+    padding: 100px;
+  }
 }
 
 @media only screen and (min-width: 768px) {
   .home,
-  .about {
+  .about,
+  .blog {
     padding: 150px;
   }
 
   .home .container {
     display: flex;
     flex-direction: column;
+    align-items: start;
     gap: 40px;
   }
 
@@ -227,8 +284,4 @@ h1 {
   .image {
     width: 80%;
   }
-}
-
-@media only screen and (min-width: 600px) {
-  
 }
