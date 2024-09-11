@@ -6,6 +6,7 @@
   --mid: #065545;
   --yellow: #febf58;
   --lighter: #E8FCF5;
+  --black: #222222;
 }
 
 .home,
@@ -13,6 +14,45 @@
 .blog {
   width: 100%;
   padding: 80px;
+}
+
+.navbar {
+  position: absolute;
+  width: 100%;
+  background-color: white;
+  opacity: 30%;
+  padding: 24px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.navbar .page {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 27px;
+  color: var(--black);
+  text-decoration: none;
+}
+
+.top {
+  position: fixed;
+  width: 70px;
+  height: 70px;
+  z-index: 5;
+  bottom: 20px;
+  right: 40px;
+  background-color: var(--yellow);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 100%;
+}
+
+.top img {
+  width: 40px;
 }
 
 .home {
@@ -350,6 +390,11 @@ h1 {
   .blog,
   .contact {
     padding: 150px;
+  }
+
+  .navigation {
+    display: flex;
+    gap: 40px;
   }
 
   .home .container {

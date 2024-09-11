@@ -1,4 +1,4 @@
-var videos= document.querySelectorAll("video")
+var videos = document.querySelectorAll("video")
 var currentVideo = null
 
 function playPause(videoId, buttonId, containerId) {
@@ -33,5 +33,16 @@ function playPause(videoId, buttonId, containerId) {
             </svg>`;
         container.classList.remove("video-playing");
         currentVideo = null;
+    }
+}
+
+var topButton = document.getElementById('top')
+var scrollThreshold = 100
+
+window.onscroll = function() {
+    if (window.scrollY > scrollThreshold) {
+        topButton.style.display = "flex"
+    } else {
+        topButton.style.display = "none"
     }
 }
