@@ -91,32 +91,68 @@
     <section class="blog">
         <h1 class="title">Title</h1>
 
-        <div class="items">
+        <div id="blogs" class="items">
             <div class="col-item-1">
-                <div class="video"></div>
+                <div class="video-container" id="video-container-1">
+                    <video id="video1" width="100%" height="392px">
+                        <source src="/assets/videos/video1.mp4" type="video/mp4">
+                    </video>
+
+                    <button id="play-pause-1" class="play-pause" onclick="playPause('video1', 'play-pause-1', 'video-container-1')">
+                        <svg width="25" height="35" viewBox="0 0 25 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0.184753 33.119V1.33107C0.184753 0.520036 1.09946 0.0463535 1.76183 0.514382L24.2555 16.4084C24.8194 16.8068 24.8194 17.6433 24.2555 18.0417L1.76183 33.9357C1.09946 34.4037 0.184753 33.93 0.184753 33.119Z"
+                                fill="white" />
+                        </svg>
+                    </button>
+                </div>
 
                 <div class="desc">
-                    <img src="" alt="">
+                    <img src="/assets/video-icon.svg" alt="">
                     <h2>TITLE</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore</p>
                 </div>
             </div>
             <div class="col-item-2">
-                <div class="video"></div>
+                <div class="video-container" id="video-container-2">
+                    <video id="video2" width="100%" height="392px">
+                        <source src="/assets/videos/video1.mp4" type="video/mp4">
+                    </video>
+
+                    <button id="play-pause-2" class="play-pause" onclick="playPause('video2', 'play-pause-2', 'video-container-2')">
+                        <svg width="25" height="35" viewBox="0 0 25 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0.184753 33.119V1.33107C0.184753 0.520036 1.09946 0.0463535 1.76183 0.514382L24.2555 16.4084C24.8194 16.8068 24.8194 17.6433 24.2555 18.0417L1.76183 33.9357C1.09946 34.4037 0.184753 33.93 0.184753 33.119Z"
+                                fill="white" />
+                        </svg>
+                    </button>
+                </div>
 
                 <div class="desc">
-                    <img src="" alt="">
+                    <img src="/assets/video-icon.svg" alt="">
                     <h2>TITLE</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore</p>
                 </div>
             </div>
             <div class="col-item-3">
-                <div class="video"></div>
+                <div class="video-container" id="video-container-3">
+                    <video id="video3" width="100%" height="392px">
+                        <source src="/assets/videos/video1.mp4" type="video/mp4">
+                    </video>
+
+                    <button id="play-pause-3" class="play-pause" onclick="playPause('video3', 'play-pause-3', 'video-container-3')">
+                        <svg width="25" height="35" viewBox="0 0 25 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0.184753 33.119V1.33107C0.184753 0.520036 1.09946 0.0463535 1.76183 0.514382L24.2555 16.4084C24.8194 16.8068 24.8194 17.6433 24.2555 18.0417L1.76183 33.9357C1.09946 34.4037 0.184753 33.93 0.184753 33.119Z"
+                                fill="white" />
+                        </svg>
+                    </button>
+                </div>
 
                 <div class="desc">
-                    <img src="" alt="">
+                    <img src="/assets/video-icon.svg" alt="">
                     <h2>TITLE</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore</p>
@@ -124,6 +160,12 @@
             </div>
         </div>
     </section>
+
+    <section class="contact">
+        
+    </section>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
