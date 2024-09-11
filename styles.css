@@ -232,6 +232,17 @@ h1 {
   gap: 80px;
 }
 
+.blog .desc {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.blog .desc img {
+  width: 32px;
+  height: 32px;
+}
+
 .video-container {
   position: relative;
   width: 418px;
@@ -272,6 +283,61 @@ h1 {
   opacity: 0;
 }
 
+.contact {
+  width: 100%;
+  background-color: var(--dark);
+  padding: 0;
+}
+
+.contact .container {
+  width: 100%;
+  padding: 40px 20px;
+  background-color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  align-items: center;
+}
+
+.contact .logos {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+.contact .social {
+  display: flex;
+  gap: 40px;
+}
+
+.contact .links {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  color: var(--dark)
+}
+
+.contact .link {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 20px;
+}
+
+.contact .links .link > * {
+  list-style-type: none;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 23px;
+  font-weight: 300;
+  letter-spacing: -0.01rem;
+  cursor: pointer;
+}
+
 @media only screen and (min-width: 600px) {
   .about, .blog {
     padding: 100px;
@@ -281,7 +347,8 @@ h1 {
 @media only screen and (min-width: 768px) {
   .home,
   .about,
-  .blog {
+  .blog,
+  .contact {
     padding: 150px;
   }
 
@@ -368,5 +435,34 @@ h1 {
 
   .blog .desc {
     padding: 80px 64px 72px 32px;
+  }
+
+  .blog {
+    padding-bottom: 0;
+  }
+
+  .contact {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .contact .container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .contact .logos {
+    gap: 76px;
+    align-items: start;
+  }
+
+  .contact .social {
+    gap: 15px;
+  }
+
+  .contact .links {
+    width: auto;
+    justify-content: center;
+    gap: 100px;
   }
 }
