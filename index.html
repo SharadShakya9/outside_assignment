@@ -18,7 +18,7 @@
 
 <body>
     <header class="navbar">
-        <a href="/"><img src="/assets/icons8-logo 1.svg" alt=""></a>
+        <img src="/assets/icons8-logo 1.svg" alt="">
 
         <nav class="navigation">
             <a href="#about" class="page">About</a>
@@ -27,6 +27,23 @@
             <a href="" class="page">Career</a>
             <a href="#contact" class="page">Contact</a>
         </nav>
+
+        <div class="menubar">
+            <label class="burger" for="burger" onclick="openMenu()">
+                <input type="checkbox" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <div id="menulinks" class="menulinks">
+                    <a href="#about" class="page">About</a>
+                    <a href="#blog" class="page">Blog</a>
+                    <a href="" class="page">Team</a>
+                    <a href="" class="page">Career</a>
+                    <a href="#contact" class="page">Contact</a>
+                </div>
+            </label>
+        </div>
     </header>
 
     <a href="/" id="top" class="top">
@@ -112,7 +129,8 @@
                         <source src="/assets/videos/video1.mp4" type="video/mp4">
                     </video>
 
-                    <button id="play-pause-1" class="play-pause" onclick="playPause('video1', 'play-pause-1', 'video-container-1')">
+                    <button id="play-pause-1" class="play-pause"
+                        onclick="playPause('video1', 'play-pause-1', 'video-container-1')">
                         <svg width="25" height="35" viewBox="0 0 25 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M0.184753 33.119V1.33107C0.184753 0.520036 1.09946 0.0463535 1.76183 0.514382L24.2555 16.4084C24.8194 16.8068 24.8194 17.6433 24.2555 18.0417L1.76183 33.9357C1.09946 34.4037 0.184753 33.93 0.184753 33.119Z"
@@ -134,7 +152,8 @@
                         <source src="/assets/videos/video1.mp4" type="video/mp4">
                     </video>
 
-                    <button id="play-pause-2" class="play-pause" onclick="playPause('video2', 'play-pause-2', 'video-container-2')">
+                    <button id="play-pause-2" class="play-pause"
+                        onclick="playPause('video2', 'play-pause-2', 'video-container-2')">
                         <svg width="25" height="35" viewBox="0 0 25 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M0.184753 33.119V1.33107C0.184753 0.520036 1.09946 0.0463535 1.76183 0.514382L24.2555 16.4084C24.8194 16.8068 24.8194 17.6433 24.2555 18.0417L1.76183 33.9357C1.09946 34.4037 0.184753 33.93 0.184753 33.119Z"
@@ -156,7 +175,8 @@
                         <source src="/assets/videos/video1.mp4" type="video/mp4">
                     </video>
 
-                    <button id="play-pause-3" class="play-pause" onclick="playPause('video3', 'play-pause-3', 'video-container-3')">
+                    <button id="play-pause-3" class="play-pause"
+                        onclick="playPause('video3', 'play-pause-3', 'video-container-3')">
                         <svg width="25" height="35" viewBox="0 0 25 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M0.184753 33.119V1.33107C0.184753 0.520036 1.09946 0.0463535 1.76183 0.514382L24.2555 16.4084C24.8194 16.8068 24.8194 17.6433 24.2555 18.0417L1.76183 33.9357C1.09946 34.4037 0.184753 33.93 0.184753 33.119Z"

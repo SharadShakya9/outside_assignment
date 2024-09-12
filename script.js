@@ -41,8 +41,10 @@ var scrollThreshold = 100
 
 window.onscroll = function() {
     if (window.scrollY > scrollThreshold) {
-        topButton.style.display = "flex"
+        topButton.style.opacity = "1"
+        topButton.style.visibility = "visible"
     } else {
-        topButton.style.display = "none"
+        topButton.style.opacity = "0"
+        topButton.style.visibility = "hidden"
     }
 }

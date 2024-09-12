@@ -19,8 +19,7 @@
 .navbar {
   position: absolute;
   width: 100%;
-  background-color: white;
-  opacity: 30%;
+  background-color: rgba(255, 255, 255, 0.3);
   padding: 24px 40px;
   display: flex;
   justify-content: space-between;
@@ -36,6 +35,96 @@
   text-decoration: none;
 }
 
+.navigation {
+  display: none;
+}
+
+.burger {
+  position: relative;
+  width: 40px;
+  height: 30px;
+  background: transparent;
+  cursor: pointer;
+  display: block;
+}
+
+.burger input {
+  display: none;
+}
+
+.burger span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: black;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.burger span:nth-of-type(1) {
+  top: 0px;
+  transform-origin: left center;
+}
+
+.burger span:nth-of-type(2) {
+  top: 50%;
+  transform: translateY(-50%);
+  transform-origin: left center;
+}
+
+.burger span:nth-of-type(3) {
+  top: 100%;
+  transform-origin: left center;
+  transform: translateY(-100%);
+}
+
+.burger input:checked ~ span:nth-of-type(1) {
+  transform: rotate(45deg);
+  top: 0px;
+  left: 5px;
+}
+
+.burger input:checked ~ span:nth-of-type(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.burger input:checked ~ span:nth-of-type(3) {
+  transform: rotate(-45deg);
+  top: 28px;
+  left: 5px;
+}
+
+.burger input:checked ~ .menulinks {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menubar {
+  position: relative;
+}
+
+.menulinks {
+  position: absolute;
+  top: 120px;
+  right: -20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 180px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
 .top {
   position: fixed;
   width: 70px;
@@ -44,11 +133,20 @@
   bottom: 20px;
   right: 40px;
   background-color: var(--yellow);
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   border-radius: 100%;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+
+  opacity: 0;
+  visibility: hidden;
+}
+
+.top:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgb(184, 207, 79);
 }
 
 .top img {
@@ -395,6 +493,10 @@ h1 {
   .navigation {
     display: flex;
     gap: 40px;
+  }
+
+  .menubar {
+    display: none;
   }
 
   .home .container {
