@@ -355,6 +355,10 @@ h1 {
 
 .blog .items {
   margin-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
+  justify-content: center;
 }
 
 .blog .items > *:not(:last-child) {
@@ -383,7 +387,6 @@ h1 {
 
 .video-container {
   position: relative;
-  width: 418px;
   height: auto;
 }
 
@@ -560,14 +563,14 @@ h1 {
     text-align: left;
   }
 
-  .blog .items {
+  /* .blog .items {
     display: grid;
     grid-template-columns: auto auto auto;
   }
 
   .blog .items > * {
     padding-right: 5px;
-  }
+  }*/
 
   .blog .items > *:not(:last-child) {
     padding-bottom: 0;
@@ -576,9 +579,10 @@ h1 {
     border-color: var(--mid);
   }
 
+  /*
   .video-container {
     width: 390px;
-  }
+  } */
 
   .blog .desc {
     padding: 80px 64px 72px 32px;
