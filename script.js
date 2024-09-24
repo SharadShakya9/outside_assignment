@@ -1,6 +1,10 @@
 var videos = document.querySelectorAll("video")
 var currentVideo = null
 
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+}
+
 function playPause(videoId, buttonId, containerId) {
     var vid = document.getElementById(videoId)
     var button = document.getElementById(buttonId)
